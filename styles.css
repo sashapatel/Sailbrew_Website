@@ -1,0 +1,466 @@
+/* ========== Global Styles ========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /*border: 1px solid red;*/
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5em;
+}
+
+/* Container with max width */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 13px;
+}
+
+/* ========== Header ========== */
+.site-header {
+  position: sticky;
+  top: 0px !important;
+  background: #333333;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 13px 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Call icon style */
+.call-icon {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 8px;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.call-icon:hover {
+  background: #fff;
+  color: #333333;
+}
+
+/* ========== Hero Section ========== */
+.hero {
+  background: #fff;
+  padding: 34px 13px;
+  text-align: center;
+  color: #868686;
+}
+
+.hero-content h1 {
+  font-family: 'Lilita One', cursive !important;
+  color: #292929;
+  font-size: 30px;
+  line-height: 1em;
+  margin-bottom: 13px;
+  font-weight: 500;
+}
+
+.sm-title {
+  font-family: 'Jost', sans-serif;
+  font-size: 14px;
+  color: #ABCA37;
+  text-transform: uppercase;
+  font-weight: 600 !important;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.hero-content p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+}
+
+/* ========== Parallax Sections ========== */
+
+/* Section-specific background images */
+/* Parallax Section 1 */
+.section-1 {
+  background-image: url('images/limbu-pani-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* Parallax Section 2 */
+.section-2 {
+  background-image: url('images/mix-fruit-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* Parallax Section 3 */
+.section-3 {
+  background-image: url('images/Mango-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* Parallax Section 4 */
+.section-4 {
+  background-image: url('images/Orange-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* Content inside each parallax section */
+.parallax-content {
+  display: flex;
+  gap: 21px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /*background: rgba(255, 255, 255, 0.8);*/
+  padding: 21px;
+  border-radius: 0;
+  /*color: #04471c;*/
+}
+
+.text-red {
+  color: #fff !important;
+}
+
+.text-yellow {
+  color: #000 !important;
+}
+
+/* Image on left */
+.parallax-image img {
+  max-width: 100%;
+  border-radius: 0px;
+  width: 100%;
+  height: auto;
+}
+
+/* Text on right */
+.parallax-text {
+  flex: 1;
+}
+
+.parallax-text h2 {
+  font-family: 'Lilita One', cursive;
+  letter-spacing: -0.5px;
+  font-size: 50px;
+  line-height: 1em;
+  margin-bottom: 24px;
+  font-weight: 400;
+  /*sub title.................*/
+  color: blue;
+}
+
+.sub-title {
+  margin-bottom: 13px;
+  /*sub title.................*/
+  color: red;         
+}
+
+.parallax-text p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  /*sub title.................*/
+  color: red;
+}
+
+h4 {
+  margin-bottom: 13px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* ========== Footer ========== */
+.site-footer {
+  background: #637660;
+  color: #fff;
+  padding: 34px 13px;
+  font-weight: normal;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 21px;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 250px;
+}
+
+.fssai-logo {
+  margin-top: 13px;
+  max-width: 250px;
+}
+
+.footer-icon {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #eeeeee;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #eeeeee;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  margin-top: 13px;
+}
+
+.footer-icon:hover {
+  background-color: #eeeeee;
+  color: #4a5259;
+}
+
+/* Social Icons Container */
+.social-icons {
+  display: flex;
+  gap: 13px;
+  justify-content: flex-start; /* left aligned */
+  align-items: center;
+  margin-top: 13px;
+}
+
+/* Each Icon Style */
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #eeeeee; /* outline */
+  border-radius: 50%;
+  color: #eeeeee;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+/* On Hover - Filled background */
+.social-icon:hover {
+  background-color: #eeeeee;
+  color: #4a5259;
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 768px) {
+  .parallax-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .parallax-image img {
+    max-width: 100%;
+  }
+
+  .post-footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .post-right {
+    justify-content: center;
+  }
+}
+
+/* ========== Download Section (Before Footer) ========== */
+/* Download Section */
+.download-section {
+  background: #5F4F5A; /* match your design color */
+  /*background-image: url(images/download-bg.png);*/
+  padding: 34px 0;
+}
+
+.download-content {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 21px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 18px; /* space between heading and button */
+}
+
+.download-content h3 {
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Button Style */
+.download-btn {
+  display: inline-block;
+  padding: 10px 21px;
+  background-color: #5F4F5A;
+  font-size: 18px;
+  color: #fff;
+  font-weight: normal;
+  text-decoration: none;
+  border-radius: 55px;
+  transition: background-color 0.3s ease;
+  border: 1px solid #fff;
+}
+
+.download-btn:hover {
+  background-color: #fff;
+  color: #5F4F5A;
+  border: 1px solid #fff;
+  font-weight: bold;
+}
+
+/* ========== Post-Footer Section ========== */
+.post-footer {
+  background-color: #30412d;
+  color: #fff;
+  padding: 8px 0;
+}
+
+.post-footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 13px;
+  font-weight: normal;
+}
+
+.post-left {
+  font-size: 14px;
+}
+
+.post-right {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  flex-wrap: wrap;
+}
+
+.ventures-label {
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+.venture-logo {
+  height: 40px;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .footer .container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer .footer-left,
+  .footer .footer-right {
+    width: 100%;
+  }
+
+  .footer .fssai-logo {
+    margin: 13px auto;
+  }
+}
+
+----------------------------
+/* ===== MOBILE VIEW FIX (Single Column Layout) ===== */
+@media (max-width: 768px) {
+
+  /* Make parallax sections single column */
+  .parallax-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Adjust text and image width */
+  .parallax-image,
+  .parallax-text {
+    width: 100%;
+  }
+
+  .parallax-text h2 {
+    font-size: 32px;
+    margin-top: 16px;
+  }
+
+  .parallax-text p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  /* Reduce padding around parallax sections */
+  .parallax-section {
+    padding: 34px 0;
+  }
+
+  /* Hero section adjustments */
+  .hero-content h1 {
+    font-size: 22px;
+    line-height: 1.2em;
+  }
+
+  .hero-content p {
+    font-size: 13px;
+  }
+
+  /* Footer and post-footer in one column */
+  .footer-content,
+  .post-footer-content {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .post-right {
+    justify-content: center;
+  }
+
+  /* Logo and call button alignment */
+  .header-container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+
+  /* Optional: reduce spacing for small screens */
+  .container {
+    padding: 0 10px;
+  }
+}
