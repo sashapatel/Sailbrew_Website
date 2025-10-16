@@ -3,8 +3,13 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /*border: 1px solid red;*/
 }
+
+/* Debug mode — show borders around everything */
+/** {
+  outline: 1px solid red !important;
+}
+*/
 
 html {
   scroll-behavior: smooth;
@@ -24,14 +29,24 @@ body {
   padding: 0 13px;
 }
 
+/* ========== Top Header ========== */
+.top-header {
+  background-color: #4CAF50;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  font-weight: 600;
+  font-size: 14px;
+}
+
 /* ========== Header ========== */
 .site-header {
   position: sticky;
   top: 0px !important;
-  background: #333333;
+  background: #fff;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 13px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 3px 0;
 }
 
 .header-container {
@@ -40,24 +55,35 @@ body {
   align-items: center;
 }
 
-/* Call icon style */
-.call-icon {
-  border: 1px solid #fff;
+/* WhatsApp button container */
+.whatsapp-icon {
+  border: 1px solid #25D366;
+  background-color: #25D366;   /* ✅ solid green background */
   border-radius: 50%;
-  padding: 8px;
-  color: #fff;
-  text-decoration: none;
-  transition: background 0.3s, color 0.3s;
-  width: 40px;
-  height: 40px;
+  width: 48px;                 /* ✅ make button slightly bigger */
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s, border 0.3s;
 }
-.call-icon:hover {
+
+/* WhatsApp icon inside */
+.whatsapp-icon i {
+  font-size: 28px;             /* ✅ 30% bigger icon */
+  color: #fff;                 /* ✅ white icon */
+}
+
+/* Hover effect */
+.whatsapp-icon:hover {
   background: #fff;
-  color: #333333;
+  border-color: #25D366;
+}
+
+.whatsapp-icon:hover i {
+  color: #25D366;
 }
 
 /* ========== Hero Section ========== */
@@ -71,7 +97,7 @@ body {
 .hero-content h1 {
   font-family: 'Lilita One', cursive !important;
   color: #292929;
-  font-size: 30px;
+  font-size: 34px;
   line-height: 1em;
   margin-bottom: 13px;
   font-weight: 500;
@@ -95,9 +121,6 @@ body {
 }
 
 /* ========== Parallax Sections ========== */
-
-/* Section-specific background images */
-/* Parallax Section 1 */
 .section-1 {
   background-image: url('images/limbu-pani-bg.jpg');
   background-size: cover;
@@ -106,7 +129,6 @@ body {
   background-repeat: no-repeat;
 }
 
-/* Parallax Section 2 */
 .section-2 {
   background-image: url('images/mix-fruit-bg.jpg');
   background-size: cover;
@@ -115,7 +137,6 @@ body {
   background-repeat: no-repeat;
 }
 
-/* Parallax Section 3 */
 .section-3 {
   background-image: url('images/Mango-banner.jpg');
   background-size: cover;
@@ -124,7 +145,6 @@ body {
   background-repeat: no-repeat;
 }
 
-/* Parallax Section 4 */
 .section-4 {
   background-image: url('images/Orange-banner.jpg');
   background-size: cover;
@@ -140,18 +160,8 @@ body {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  /*background: rgba(255, 255, 255, 0.8);*/
   padding: 21px;
   border-radius: 0;
-  /*color: #04471c;*/
-}
-
-.text-red {
-  color: #fff !important;
-}
-
-.text-yellow {
-  color: #000 !important;
 }
 
 /* Image on left */
@@ -167,30 +177,55 @@ body {
   flex: 1;
 }
 
+/* Product section colors */
 .parallax-text h2 {
-  font-family: 'Lilita One', cursive;
-  letter-spacing: -0.5px;
+  font-family: 'Ranchers', cursive; /* UPDATED FONT */
+  letter-spacing: 2px;
   font-size: 50px;
   line-height: 1em;
   margin-bottom: 24px;
-  font-weight: 400;
-  /*sub title.................*/
-  color: blue;
+  font-weight: 400; /* Ranchers only has 400 */
+  /* color line removed */
 }
 
-.sub-title {
-  margin-bottom: 13px;
-  /*sub title.................*/
-  color: red;         
+/* ===== Unique Colors for Each Parallax Section ===== */
+.section-1 .parallax-text h2 { color: #4bd200; }
+.section-2 .parallax-text h2 { color: #6E0F12; }
+.section-3 .parallax-text h2 { color: #ffb300; }
+.section-4 .parallax-text h2 { color: #ff4f00; }
+
+
+.parallax-text p:not(.sub-title) {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  color: #333333; /* Paragraph color */
 }
+
+/* ===== Sub-Title Common Style ===== */
+.sub-title {
+  font-family: 'Grandstander', cursive; /* Using Grandstander font */
+  font-weight: 500 !important;                     /* Default medium weight */
+  font-size: 21px !important;                      /* Slightly larger for better visibility */
+  line-height: 1.3em;
+  letter-spacing: 0.5px;
+  margin-bottom: 13px;
+  color: #1a1a1a;                       /* Neutral dark tone (you can change if needed) */
+}
+
+/* ===== Unique Colors for Each Parallax Section ===== */
+.section-1 .sub-title { color: #4bd200; }
+.section-2 .sub-title { color: #6E0F12; }
+.section-3 .sub-title { color: #ffb300; }
+.section-4 .sub-title { color: #ff4f00; }
 
 .parallax-text p {
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
   letter-spacing: 0.5px;
-  /*sub title.................*/
-  color: red;
+  color: blue; /* Paragraph color */
 }
 
 h4 {
@@ -201,7 +236,7 @@ h4 {
 
 /* ========== Footer ========== */
 .site-footer {
-  background: #637660;
+  background: #00A721;
   color: #fff;
   padding: 34px 13px;
   font-weight: normal;
@@ -220,85 +255,39 @@ h4 {
   min-width: 250px;
 }
 
+/* FSSAI logo + license text layout */
+.fssai-section {
+  display: flex;
+  align-items: center; /* Vertically center the logo and text */
+  gap: 10px; /* Space between logo and text */
+  justify-content: left; /* Center both horizontally */
+  margin-top: 13px;
+}
+
 .fssai-logo {
-  margin-top: 13px;
-  max-width: 250px;
+  width: 100px; /* Set logo width */
+  height: auto; /* Keep proportions */
 }
 
-.footer-icon {
-  width: 40px;
-  height: 40px;
-  border: 1px solid #eeeeee;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #eeeeee;
+.fssai-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.footer-right a {
+  color: #fff;
   text-decoration: none;
-  transition: background 0.3s ease;
-  margin-top: 13px;
 }
 
-.footer-icon:hover {
-  background-color: #eeeeee;
-  color: #4a5259;
+.footer-right a:hover {
+  text-decoration: underline;
 }
 
-/* Social Icons Container */
-.social-icons {
-  display: flex;
-  gap: 13px;
-  justify-content: flex-start; /* left aligned */
-  align-items: center;
-  margin-top: 13px;
-}
-
-/* Each Icon Style */
-.social-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 34px;
-  height: 34px;
-  border: 1px solid #eeeeee; /* outline */
-  border-radius: 50%;
-  color: #eeeeee;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  font-size: 16px;
-}
-
-/* On Hover - Filled background */
-.social-icon:hover {
-  background-color: #eeeeee;
-  color: #4a5259;
-}
-
-/* ========== Responsive Design ========== */
-@media (max-width: 768px) {
-  .parallax-content {
-    flex-direction: column;
-    text-align: center;
-  }
-  .parallax-image img {
-    max-width: 100%;
-  }
-
-  .post-footer-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .post-right {
-    justify-content: center;
-  }
-}
-
-/* ========== Download Section (Before Footer) ========== */
-/* Download Section */
+/* ========== Download Section ========== */
 .download-section {
-  background: #5F4F5A; /* match your design color */
-  /*background-image: url(images/download-bg.png);*/
+  background: url('images/download-BG.jpg') right bottom / cover no-repeat, #95D6F4;
+  text-align: center;
   padding: 34px 0;
 }
 
@@ -306,7 +295,7 @@ h4 {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5em;
-  color: #fff;
+  color: #2d2a6e;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 21px;
@@ -314,40 +303,39 @@ h4 {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 18px; /* space between heading and button */
+  gap: 18px;
 }
 
 .download-content h3 {
   font-size: 25px;
   line-height: 30px;
   font-weight: 600;
-  color: #fff;
+  color: #2d2a6e;
 }
 
-/* Button Style */
 .download-btn {
   display: inline-block;
   padding: 10px 21px;
-  background-color: #5F4F5A;
+  background-color: #95D6F4;
   font-size: 18px;
-  color: #fff;
+  color: #2d2a6e;
   font-weight: normal;
   text-decoration: none;
   border-radius: 55px;
   transition: background-color 0.3s ease;
-  border: 1px solid #fff;
+  border: 1px solid #2d2a6e;
 }
 
 .download-btn:hover {
-  background-color: #fff;
-  color: #5F4F5A;
-  border: 1px solid #fff;
+  background-color: #2d2a6e;
+  color: #95D6F4;
+  border: 1px solid #95D6F4;
   font-weight: bold;
 }
 
 /* ========== Post-Footer Section ========== */
 .post-footer {
-  background-color: #30412d;
+  background-color: #004727;
   color: #fff;
   padding: 8px 0;
 }
@@ -382,41 +370,21 @@ h4 {
   width: auto;
 }
 
-@media (max-width: 768px) {
-  .footer .container {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-  }
-
-  .footer .footer-left,
-  .footer .footer-right {
-    width: 100%;
-  }
-
-  .footer .fssai-logo {
-    margin: 13px auto;
-  }
-}
-
-----------------------------
-/* ===== MOBILE VIEW FIX (Single Column Layout) ===== */
+/* ========== Responsive Design ========== */
 @media (max-width: 768px) {
 
-  /* Make parallax sections single column */
   .parallax-content {
     flex-direction: column;
     text-align: center;
   }
 
-  /* Adjust text and image width */
   .parallax-image,
   .parallax-text {
     width: 100%;
   }
 
   .parallax-text h2 {
-    font-size: 32px;
+    font-size: 40px;
     margin-top: 16px;
   }
 
@@ -425,12 +393,10 @@ h4 {
     line-height: 20px;
   }
 
-  /* Reduce padding around parallax sections */
   .parallax-section {
     padding: 34px 0;
   }
 
-  /* Hero section adjustments */
   .hero-content h1 {
     font-size: 22px;
     line-height: 1.2em;
@@ -440,7 +406,6 @@ h4 {
     font-size: 13px;
   }
 
-  /* Footer and post-footer in one column */
   .footer-content,
   .post-footer-content {
     flex-direction: column;
@@ -452,15 +417,20 @@ h4 {
     justify-content: center;
   }
 
-  /* Logo and call button alignment */
   .header-container {
     flex-direction: row;
     justify-content: space-between;
     padding: 0 10px;
   }
 
-  /* Optional: reduce spacing for small screens */
   .container {
     padding: 0 10px;
+  }
+}
+
+/* ===== Desktop Footer Spacing ===== */
+@media (min-width: 769px) {
+  .footer-content {
+    gap: 55px; /* increased spacing for desktop view */
   }
 }
